@@ -7,7 +7,7 @@ set(GZ_DOXYGEN_TAGFILES
    \"${GZ-COMMON_DOXYGEN_TAGFILE} = ${GZ-COMMON_API_URL}\""
 )
 
-if (DOXYGEN_FOUND)
+if (DOXYGEN_FOUND AND NOT BUILD_DOCS)
   configure_file(${GZ_CMAKE_DOXYGEN_DIR}/api.in
                  ${CMAKE_BINARY_DIR}/api.dox @ONLY)
 
